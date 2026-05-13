@@ -1,0 +1,124 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    --gold-gradient: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+}
+
+.badge-gallery-container {
+    padding: 24px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+.badge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.badge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid transparent;
+}
+
+.badge-item.earned {
+    background: white;
+    border-color: var(--primary-light);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+}
+
+.badge-item.earned:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.2);
+}
+
+.badge-item.locked {
+    filter: grayscale(1);
+    opacity: 0.6;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px dashed var(--text-secondary);
+}
+
+.badge-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f8fafc;
+    margin-bottom: 12px;
+}
+
+.badge-item.earned .badge-icon {
+    background: var(--primary-light);
+}
+
+.badge-name {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+}
+
+.badge-desc {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    line-height: 1.2;
+}
+
+/* Wallet Card Aesthetics */
+.wallet-card-main {
+    background: var(--primary-gradient);
+    color: white !important;
+    border: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.wallet-card-main::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.floating-coin {
+    font-size: 4rem;
+    filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.5));
+    animation: float 3s ease-in-out infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.streak-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

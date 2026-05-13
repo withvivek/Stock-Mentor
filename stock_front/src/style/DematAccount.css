@@ -1,0 +1,29 @@
+.demat-account-page {
+    background-color: var(--background);
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .demat-account-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .account-title {
+    margin-bottom: 2rem;
+    color: var(--primary);
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .button-group .btn {
+    min-width: 100px;
+  }

@@ -1,0 +1,64 @@
+.learn-page {
+  background-color: var(--background);
+  min-height: calc(100vh - 80px);
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.resources-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.resource-link {
+  background-color: var(--primary);
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.resource-link:hover {
+  background-color: var(--primary-dark);
+}
+
+.quiz-section {
+  padding: 2rem;
+}
+
+.quiz-container {
+  margin-top: 1.5rem;
+}
+
+.quiz-question {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.quiz-option {
+  display: block;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.quiz-option input {
+  margin-right: 0.5rem;
+}
+
+.quiz-result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}

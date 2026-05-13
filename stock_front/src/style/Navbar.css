@@ -1,0 +1,99 @@
+.navbar {
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    margin: 1rem 0;
+  }
+} 
+
+.username-display {
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-right: 1.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: rgba(var(--primary-rgb), 0.1);
+  border-radius: 4px;
+  border-left: 3px solid var(--primary);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  transition: all 0.2s ease;
+}
+
+.username-display:hover {
+  background-color: rgba(var(--primary-rgb), 0.15);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .username-display {
+    margin: 0.5rem 0;
+    max-width: 100%;
+    text-align: center;
+    border-left: none;
+    border-bottom: 2px solid var(--primary);
+    background-color: transparent;
+    padding: 0.5rem 0;
+    order: -1;
+    width: 100%;
+  }
+  
+  .username-display:hover {
+    background-color: transparent;
+    transform: none;
+  }
+}
